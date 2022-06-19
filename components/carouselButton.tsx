@@ -1,6 +1,6 @@
 import React from 'react'
 
-function carosuelButton(props: any) {
+function carouselButton(props: any) {
     interface props {
         id: number
         name: string
@@ -18,4 +18,4 @@ let classPlaceholder: string = ""
     )
 }
 
-export default carosuelButton
+export default carouselButton
