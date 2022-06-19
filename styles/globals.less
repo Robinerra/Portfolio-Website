@@ -173,7 +173,14 @@ body {
     border: none;
 
     &.active {
-        text-decoration: underline 2px #D60270;
+        text-decoration: underline 2px #D60270 !important;
+        //The underline isn't standard and is FUBAR on Safari for IOS, so we need this webkit stuff.
+        // https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+        -webkit-text-decoration-line: underline !important;
+        -webkit-text-decoration-color: #D60270 !important;
+        -webkit-text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 4px !important;
+
     }
 }
 
