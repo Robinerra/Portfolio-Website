@@ -1,3 +1,5 @@
+//Copyright Elise Willar 2022 for elisewillar.com
+//19th of June 2022
 import type { NextPage } from 'next'
 import Head from 'next/head'
 import Image from 'next/image'

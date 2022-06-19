@@ -1,4 +1,5 @@
-// Next.js API route support: https://nextjs.org/docs/api-routes/introduction
+//Copyright Elise Willar 2022 for elisewillar.com
+//19th of June 2022
 import type { NextApiRequest, NextApiResponse } from 'next'
 
 type Data = {

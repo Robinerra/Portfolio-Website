@@ -1,15 +1,26 @@
+//Copyright Elise Willar 2022 for elisewillar.com
+//19th of June 2022
 import React, { useState } from "react";
 import CarouselButton from "./carouselButton";
 import Image from "next/image";
 import tauriIcon from "../public/tauriIcon.png";
 
 function Carousel() {
+  //State where the current slide is stored
   const [slide, setSlide] = useState<number>(0);
 
-  return (
     //Would've loved to call the carousel slides/buttons their actual names but
     //numbers are so much easier to work with.
     //0 = about me, 1 = skills, 2 = projects.
+
+    //The way this whole thing works is pretty neat, it works like thiis:  ("|  |" being the current viewport and [I] being the slide):
+    //            |[0]|  [1]  [2]
+    //       [0]  |[1]|  [2]
+    //  [0]  [1]  |[2]|  
+    //So the inner div essentially has a size of 300% viewport width, and every slide a width of 100%,
+    //and we're shifting it by -100% or 100% to bring the different slides into the viewport, this all works with CSS transform & translate,
+    //the only JS is just the button handling.
+  return (
     <>
       <div id="carouselButtonContainer">
         <CarouselButton id={0} name="About" setSlide={setSlide} slide={slide} />
