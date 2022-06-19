@@ -118,7 +118,7 @@ body h3 {
   -webkit-text-decoration-line: underline !important;
   -webkit-text-decoration-color: #D60270 !important;
   -webkit-text-decoration-style: solid !important;
-  -webkit-text-decoration-thickness: 2px !important;
+  -webkit-text-decoration-thickness: 4px !important;
 }
 #carouselButton0 {
   animation: fadeIn 3s;
