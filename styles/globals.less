@@ -13,11 +13,13 @@
     src: url("fonts/LibreBaskerville-Italic.ttf");
     font-style: italic;
 }
+
 @font-face {
     font-family: "Libre Baskerville";
     src: url("fonts/LibreBaskerville-Regular.ttf");
-    font-style:normal;
+    font-style: normal;
 }
+
 @font-face {
     font-family: "Libre Baskerville";
     src: url("fonts/LibreBaskerville-Bold.ttf");
@@ -163,25 +165,41 @@ body {
 ////////////
 
 //Buttons
-.carouselButton {
-    transition: .2s ease-in;
-    color: @textColor;
-    background-color: transparent;
-    font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
-    font-size: 1.1em;
-    padding: 1.3em;
-    border: none;
 
-    &.active {
-        text-decoration: underline 2px #D60270 !important;
-        //The underline isn't standard and is FUBAR on Safari for IOS, so we need this webkit stuff.
-        // https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
-        -webkit-text-decoration-line: underline !important;
-        -webkit-text-decoration-color: #D60270 !important;
-        -webkit-text-decoration-style: solid !important;
-        -webkit-text-decoration-thickness: 4px !important;
+#carouselButtonContainer {
 
+    .carouselButton {
+        transition: .2s ease-in;
+        color: @textColor;
+        background-color: transparent;
+        font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+        font-size: 1.1em;
+        padding: 1.3em;
+        border: none;
+
+        &.active {
+            text-decoration: underline 2px #D60270 !important;
+            //The text decoration isn't standard and is FUBAR on some browsers like Safari on IOS,
+            //so we need all this stuff.
+            //https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+            -webkit-text-decoration-line: underline !important;
+            text-decoration-line: underline !important;
+            -webkit-text-decoration-color: #D60270 !important;
+            text-decoration-color: #D60270 !important;
+            -webkit-text-decoration-style: solid !important;
+            text-decoration-style: solid !important;
+            -webkit-text-decoration-thickness: 4px !important;
+            text-decoration-thickness: 4px !important;
+        }
     }
+
+    //Needs to be a seperate declaration otherwise Less won't compile it correctly
+    .carouselButton:hover {
+        font-size: 1.3em;
+        padding: 0.9em;
+    }
+
+    height: 4.5em;
 }
 
 #carouselButton0 {
@@ -202,10 +220,7 @@ body {
 
 //This needs to be seperated otherwise Less will put a space before :hover and will
 //cause it to just not function
-.carouselButton:hover {
-    font-size: 1.3em;
-    padding: 0.9em;
-}
+
 
 
 
@@ -234,6 +249,7 @@ body {
             text-align: center;
             overflow-wrap: break-word;
             max-width: 50em;
+
             p {
                 max-width: 25em;
                 white-space: normal;
@@ -243,27 +259,24 @@ body {
 
     }
 
-    #carouselSlide0 {
-
-    }
+    #carouselSlide0 {}
 
     #carouselSlide1 {
         .hobbiesCategory {
             display: flex;
             max-width: 20em;
             flex-wrap: wrap;
-            justify-content:center;
+            justify-content: center;
+
             p {
-                padding:5px;
+                padding: 5px;
                 margin: 0px;
                 font-size: 0.9em;
             }
         }
     }
 
-    #carouselSlide2 {
-
-    }
+    #carouselSlide2 {}
 }
 
 ////////////////////
@@ -271,6 +284,7 @@ body {
 ////////////////////
 .quote {
     text-align: center;
+
     .quoteClosingMark {
         font-size: 0.9em;
     }
@@ -299,10 +313,10 @@ body {
 //Copyright//
 /////////////
 #copyrightContainer {
-opacity: 0.2
+    opacity: 0.2
 }
 
 #copyrightText {
-font-size: small;
+    font-size: small;
 
 }

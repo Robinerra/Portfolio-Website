@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import CarosuelButton from "./carosuelButton";
+import CarouselButton from "./carouselButton";
 import Image from "next/image";
 import tauriIcon from "../public/tauriIcon.png";
 
@@ -11,15 +11,21 @@ function Carousel() {
     //numbers are so much easier to work with.
     //0 = about me, 1 = skills, 2 = projects.
     <>
-      <CarosuelButton id={0} name="About" setSlide={setSlide} slide={slide} />
-      <CarosuelButton id={1} name="Skills" setSlide={setSlide} slide={slide} />
-      <CarosuelButton
-        id={2}
-        name="Projects"
-        setSlide={setSlide}
-        slide={slide}
-      />
-
+      <div id="carouselButtonContainer">
+        <CarouselButton id={0} name="About" setSlide={setSlide} slide={slide} />
+        <CarouselButton
+          id={1}
+          name="Skills"
+          setSlide={setSlide}
+          slide={slide}
+        />
+        <CarouselButton
+          id={2}
+          name="Projects"
+          setSlide={setSlide}
+          slide={slide}
+        />
+      </div>
       <div id="carouselSlideContainer">
         <div
           id="carouselSlideInner"
