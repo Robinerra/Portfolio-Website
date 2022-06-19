@@ -1,16 +1,198 @@
-html,
+@font-face {
+  font-family: "Oxygen Regular";
+  src: url("fonts/Oxygen-Regular.woff");
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Bold.ttf");
+  font-weight: bold;
+}
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes textclip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes borderGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
 body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
+  animation: fadeIn 3s;
+  background-color: #0b090a;
+  color: #f2f2f2;
+  font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+  text-align: center;
 }
-
-a {
-  color: inherit;
-  text-decoration: none;
+body p {
+  background-color: #0b090a;
+  max-width: 50%;
+  margin-left: auto;
+  margin-right: auto;
 }
-
-* {
-  box-sizing: border-box;
+body h1 {
+  background-color: #0b090a;
+}
+body h2 {
+  background-color: #0b090a;
+}
+body h3 {
+  background-color: #0b090a;
+}
+#title {
+  padding: 10px;
+}
+#title #titleName {
+  margin-bottom: 0px;
+}
+#title #titleName .titleNameSmall {
+  font-size: 2.1em;
+}
+#title #titleName .titleNameGradient {
+  font-size: 2.5em;
+  font-family: "Libre Baskerville", Georgia, serif;
+  font-weight: bold;
+  background: linear-gradient(-45deg, #D60270, #9B4F96, #0038A8);
+  background-size: auto auto;
+  background-clip: border-box;
+  background-size: 200% auto;
+  color: #fff;
+  background-clip: text;
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: textclip 10s ease infinite;
+}
+#title #titleSplashtext {
+  font-size: small;
+  font-style: italic;
+  margin-left: 40em;
+  margin-top: 0px;
+}
+#title #titleSubtext {
+  font-size: 1.4em;
+  animation: fadeIn 10s;
+}
+#selfPhoto {
+  animation: fadeIn 3s;
+  max-width: 10em;
+  width: 160px;
+  height: 160px;
+  color: transparent;
+  border-radius: 50em;
+}
+.carouselButton {
+  transition: 0.2s ease-in;
+  color: #f2f2f2;
+  background-color: transparent;
+  font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+  font-size: 1.1em;
+  padding: 1.3em;
+  border: none;
+}
+.carouselButton.active {
+  text-decoration: underline 2px #D60270;
+}
+#carouselButton0 {
+  animation: fadeIn 3s;
+}
+#carouselButton1 {
+  animation: fadeIn 4s;
+}
+#carouselButton2 {
+  animation: fadeIn 5s;
+}
+#carouselButton3 {
+  animation: fadeIn 6s;
+}
+.carouselButton:hover {
+  font-size: 1.3em;
+  padding: 0.9em;
+}
+#carouselSlideContainer {
+  overflow: hidden;
+}
+#carouselSlideContainer #carouselSlideInner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+#carouselSlideContainer .carouselSlide {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+#carouselSlideContainer .carouselSlide .slideContent {
+  display: inline-block;
+  text-align: center;
+  overflow-wrap: break-word;
+  max-width: 50em;
+}
+#carouselSlideContainer .carouselSlide .slideContent p {
+  max-width: 25em;
+  white-space: normal;
+  flex-wrap: wrap;
+}
+#carouselSlideContainer #carouselSlide1 .hobbiesCategory {
+  display: flex;
+  max-width: 20em;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+#carouselSlideContainer #carouselSlide1 .hobbiesCategory p {
+  padding: 5px;
+  margin: 0px;
+  font-size: 0.9em;
+}
+.quote {
+  text-align: center;
+}
+.quote .quoteClosingMark {
+  font-size: 0.9em;
+}
+.quote .quoteOpeningMark {
+  font-size: 1.4em;
+}
+.quote .quoteMark {
+  font-family: "Libre Baskerville", Helvetica, Georgia, serif;
+}
+.quote .quoteText {
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+.quote .quoteCitation {
+  font-style: italic;
+  font-size: 0.8em;
+  display: inline-block;
+  text-align: right;
+}
+#copyrightContainer {
+  opacity: 0.2;
+}
+#copyrightText {
+  font-size: small;
 }

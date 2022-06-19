@@ -1,0 +1,301 @@
+/////////////////////////////////////
+//Color variables, fonts, keyframes//
+/////////////////////////////////////
+
+@font-face {
+    font-family: "Oxygen Regular";
+    src: url("fonts/Oxygen-Regular.woff");
+}
+
+//I would just use Georgia but it's a propreitary microsoft font. Shame.
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("fonts/LibreBaskerville-Italic.ttf");
+    font-style: italic;
+}
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("fonts/LibreBaskerville-Regular.ttf");
+    font-style:normal;
+}
+@font-face {
+    font-family: "Libre Baskerville";
+    src: url("fonts/LibreBaskerville-Bold.ttf");
+    font-weight: bold;
+}
+
+//Dark but kinda
+@backgroundColor: #0b090a;
+//A nice color that isn't pure white
+@textColor: #f2f2f2;
+
+//The fade in effect when loading
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+    }
+
+    to {
+        opacity: 1;
+    }
+}
+
+//For the beautiful gradient on my name in the title
+@keyframes textclip {
+    0% {
+        background-position: 0% 50%;
+    }
+
+    50% {
+        background-position: 100% 50%;
+    }
+
+    100% {
+        background-position: 0% 50%;
+    }
+}
+
+@keyframes borderGradient {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+////////
+//Body//
+////////
+body {
+    animation: fadeIn 3s;
+    //This overwrites the default color i put in the head to avoid flashbangs
+    background-color: @backgroundColor;
+    color: @textColor;
+    font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+    text-align: center;
+
+
+    p {
+        background-color: @backgroundColor;
+        max-width: 50%;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    h1 {
+        background-color: @backgroundColor;
+    }
+
+    h2 {
+        background-color: @backgroundColor;
+    }
+
+    h3 {
+        background-color: @backgroundColor;
+    }
+}
+
+////////////////////
+//Title and footer//
+////////////////////
+//The container for the title
+#title {
+    padding: 10px;
+
+    //The header that "I'm Elise Willar." is in 
+    #titleName {
+        margin-bottom: 0px;
+
+        //The span where 'I'm" and "." from the title is
+        //it's smaller to improve readability since the fonts are different
+        .titleNameSmall {
+            font-size: 2.1em;
+        }
+
+        //The span where "Elise Willar" is in with fancy colors
+        .titleNameGradient {
+            font-size: 2.5em;
+            font-family: "Libre Baskerville", Georgia, serif;
+            font-weight: bold;
+            //Animation stuff
+            //Most of these declarations are for compatibility
+            background: linear-gradient(-45deg, #D60270, #9B4F96, #0038A8);
+            background-size: auto auto;
+            background-clip: border-box;
+            background-size: 200% auto;
+            color: #fff;
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+
+            animation: textclip 10s ease infinite;
+        }
+
+
+    }
+
+    //The paragraph where "But you can call me ellie" is
+    #titleSplashtext {
+        font-size: small;
+        font-style: italic;
+        margin-left: 40em;
+        margin-top: 0px;
+    }
+
+    //The header where 'Software Engineer & Web Developer is'
+    #titleSubtext {
+        font-size: 1.4em;
+        animation: fadeIn 10s;
+    }
+
+}
+
+#selfPhoto {
+    animation: fadeIn 3s;
+    max-width: 10em;
+    width: 160px;
+    height: 160px;
+    color: transparent;
+    border-radius: 50em;
+
+}
+
+/////////////
+//Carousel//
+////////////
+
+//Buttons
+.carouselButton {
+    transition: .2s ease-in;
+    color: @textColor;
+    background-color: transparent;
+    font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+    font-size: 1.1em;
+    padding: 1.3em;
+    border: none;
+
+    &.active {
+        text-decoration: underline 2px #D60270;
+    }
+}
+
+#carouselButton0 {
+    animation: fadeIn 3s;
+}
+
+#carouselButton1 {
+    animation: fadeIn 4s;
+}
+
+#carouselButton2 {
+    animation: fadeIn 5s;
+}
+
+#carouselButton3 {
+    animation: fadeIn 6s;
+}
+
+//This needs to be seperated otherwise Less will put a space before :hover and will
+//cause it to just not function
+.carouselButton:hover {
+    font-size: 1.3em;
+    padding: 0.9em;
+}
+
+
+
+//Actual carousel
+
+#carouselSlideContainer {
+    overflow: hidden;
+
+
+    #carouselSlideInner {
+        white-space: nowrap;
+        transition: transform 0.3s;
+    }
+
+    .carouselSlide {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+
+        .slideContent {
+            display: inline-block;
+            text-align: center;
+            overflow-wrap: break-word;
+            max-width: 50em;
+            p {
+                max-width: 25em;
+                white-space: normal;
+                flex-wrap: wrap;
+            }
+        }
+
+    }
+
+    #carouselSlide0 {
+
+    }
+
+    #carouselSlide1 {
+        .hobbiesCategory {
+            display: flex;
+            max-width: 20em;
+            flex-wrap: wrap;
+            justify-content:center;
+            p {
+                padding:5px;
+                margin: 0px;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    #carouselSlide2 {
+
+    }
+}
+
+////////////////////
+//Other components//
+////////////////////
+.quote {
+    text-align: center;
+    .quoteClosingMark {
+        font-size: 0.9em;
+    }
+
+    .quoteOpeningMark {
+        font-size: 1.4em;
+    }
+
+    .quoteMark {
+        font-family: "Libre Baskerville", Helvetica, Georgia, serif;
+    }
+
+    .quoteText {
+        font-family: "Libre Baskerville", Georgia, serif;
+    }
+
+    .quoteCitation {
+        font-style: italic;
+        font-size: 0.8em;
+        display: inline-block;
+        text-align: right;
+    }
+}
+
+/////////////
+//Copyright//
+/////////////
+#copyrightContainer {
+opacity: 0.2
+}
+
+#copyrightText {
+font-size: small;
+
+}
