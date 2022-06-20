@@ -133,7 +133,7 @@ function Carousel() {
           <div id="carouselSlide2" className="carouselSlide">
             <div className="slideContent">
               <p>
-               I haven't published any of my work so I have an absence of material to share as of now.
+               I haven&apos;t published any of my work so I have an absence of material to share as of now.
               </p>
             </div>
           </div>
