@@ -52,7 +52,7 @@ function Carousel() {
               <p>
                 I started programming when I was 13 making Discord bots with
                 javascript. That passion and love for programming has stayed
-                with me to adulthood and has been a daily hobby of mine since.
+                with me to adulthood and has been a daily hobby of mine for 4 years.
               </p>
               <p>
                 Computer science, Electronic engineering, Networking,
@@ -133,8 +133,7 @@ function Carousel() {
           <div id="carouselSlide2" className="carouselSlide">
             <div className="slideContent">
               <p>
-                None of my projects are open source right now, but I&apos;m
-                working on publishing them to add here.
+               I haven't published any of my work so I have an absence of material to share as of now.
               </p>
             </div>
           </div>
