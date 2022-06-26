@@ -48,20 +48,11 @@ body {
   font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
   text-align: center;
 }
-body p {
-  background-color: #0b090a;
-  max-width: 50%;
-  margin-left: auto;
-  margin-right: auto;
+a {
+  color: #00a2e7;
 }
-body h1 {
-  background-color: #0b090a;
-}
-body h2 {
-  background-color: #0b090a;
-}
-body h3 {
-  background-color: #0b090a;
+a:visited {
+  color: #D60270;
 }
 #title {
   padding: 10px;
@@ -76,7 +67,7 @@ body h3 {
   font-size: 2.5em;
   font-family: "Libre Baskerville", Georgia, serif;
   font-weight: bold;
-  background: linear-gradient(-45deg, #D60270, #9B4F96, #0038A8);
+  background: linear-gradient(-45deg, #D60270, #9B4F96, #0038A8, #00a2e7);
   background-size: auto auto;
   background-clip: border-box;
   background-size: 200% auto;
@@ -202,7 +193,7 @@ body h3 {
   text-align: right;
 }
 #copyrightContainer {
-  opacity: 0.2;
+  opacity: 0.2Copyright;
 }
 #copyrightText {
   font-size: small;
