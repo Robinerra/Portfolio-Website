@@ -1,25 +1,27 @@
 //Copyright Elise Willar 2022 for elisewillar.com
-//19th of June 2022
+//26th of June 2022
 import React, { useState } from "react";
 import CarouselButton from "./carouselButton";
 import Image from "next/image";
 import tauriIcon from "../public/tauriIcon.png";
+import GithubProject from "./githubProject";
+import githubProjectStyle from "../styles/githubProject.module.css";
 
 function Carousel() {
   //State where the current slide is stored
   const [slide, setSlide] = useState<number>(0);
 
-    //Would've loved to call the carousel slides/buttons their actual names but
-    //numbers are so much easier to work with.
-    //0 = about me, 1 = skills, 2 = projects.
+  //Would've loved to call the carousel slides/buttons their actual names but
+  //numbers are so much easier to work with.
+  //0 = about me, 1 = skills, 2 = projects.
 
-    //The way this whole thing works is pretty neat, it works like thiis:  ("|  |" being the current viewport and [I] being the slide):
-    //            |[0]|  [1]  [2]
-    //       [0]  |[1]|  [2]
-    //  [0]  [1]  |[2]|  
-    //So the inner div essentially has a size of 300% viewport width, and every slide a width of 100%,
-    //and we're shifting it by -100% or 100% to bring the different slides into the viewport, this all works with CSS transform & translate,
-    //the only JS is just the button handling.
+  //The way this whole thing works is pretty neat, it works like thiis:  ("|  |" being the current viewport and [I] being the slide):
+  //            |[0]|  [1]  [2]
+  //       [0]  |[1]|  [2]
+  //  [0]  [1]  |[2]|
+  //So the inner div essentially has a size of 300% viewport width, and every slide a width of 100%,
+  //and we're shifting it by -100% or 100% to bring the different slides into the viewport, this all works with CSS transform & translate,
+  //the only JS is just the button handling.
   return (
     <>
       <div id="carouselButtonContainer">
@@ -52,7 +54,8 @@ function Carousel() {
               <p>
                 I started programming when I was 13 making Discord bots with
                 javascript. That passion and love for programming has stayed
-                with me to adulthood and has been a daily hobby of mine for 4 years.
+                with me to adulthood and has been a daily hobby of mine for 4
+                years.
               </p>
               <p>
                 Computer science, Electronic engineering, Networking,
@@ -132,9 +135,20 @@ function Carousel() {
           </div>
           <div id="carouselSlide2" className="carouselSlide">
             <div className="slideContent">
-              <p>
-               I haven&apos;t published any of my work so I have an absence of material to share as of now.
-              </p>
+              <div className={githubProjectStyle.container}>
+                <GithubProject
+                  link="https://github.com/Robinerra/Portfolio-Website"
+                  name="elisewillar.com"
+                  description="A minimalist design portfolio, used by yours truly."
+                  icons={[
+                    "devicon-nextjs-original",
+                    "devicon-typescript-plain colored",
+                    "devicon-react-original",
+                    "devicon-less-plain-wordmark",
+                  ]}
+                />
+               
+              </div>
             </div>
           </div>
         </div>

@@ -1,5 +1,7 @@
 //Copyright Elise Willar 2022 for elisewillar.com
-//19th of June 2022
+//26th of June 2022
+
+//Note to self, migrate to CSS modules ASAP
 
 /////////////////////////////////////
 //Color variables, fonts, keyframes//
@@ -76,26 +78,15 @@ body {
     color: @textColor;
     font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
     text-align: center;
+}
 
 
-    p {
-        background-color: @backgroundColor;
-        max-width: 50%;
-        margin-left: auto;
-        margin-right: auto;
-    }
+a {
+    color: #00a2e7
+}
 
-    h1 {
-        background-color: @backgroundColor;
-    }
-
-    h2 {
-        background-color: @backgroundColor;
-    }
-
-    h3 {
-        background-color: @backgroundColor;
-    }
+a:visited {
+    color: #D60270
 }
 
 ////////////////////
@@ -122,7 +113,7 @@ body {
             font-weight: bold;
             //Animation stuff
             //Most of these declarations are for compatibility
-            background: linear-gradient(-45deg, #D60270, #9B4F96, #0038A8);
+            background: linear-gradient(-45deg, #D60270, #9B4F96, #0038A8, #00a2e7);
             background-size: auto auto;
             background-clip: border-box;
             background-size: 200% auto;
@@ -312,11 +303,15 @@ body {
     }
 }
 
+//////////////////////
+//Github Embed Thing//
+//////////////////////
+
 /////////////
 //Copyright//
 /////////////
 #copyrightContainer {
-    opacity: 0.2
+    opacity: 0.2Copyright
 }
 
 #copyrightText {
