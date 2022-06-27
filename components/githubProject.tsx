@@ -22,7 +22,7 @@ function githubProject(props: any) {
     <div className={style.projectContainer}>
       <h3>
         <i className="devicon-github-original" />{" "}
-        <a target={"_blank"} rel="noreferrer" href={props.link}>
+        <a target={"_blank"} rel="noreferrer" tabIndex={4} href={props.link}>
           {props.name}
         </a>{" "}
         {icons1}

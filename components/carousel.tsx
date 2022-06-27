@@ -23,8 +23,6 @@ function Carousel() {
   //So the inner div essentially has a size of 300% viewport width, and every slide a width of 100%,
   //and we're shifting it by -100% or 100% to bring the different slides into the viewport, this all works with CSS transform & translate,
   //the only JS is just the button handling.
-
-  //And yes the skills & hobbies page is hell
   return (
     <>
       <div id="carouselButtonContainer">
@@ -45,10 +43,9 @@ function Carousel() {
       <div id="carouselSlideContainer">
         <div
           id="carouselSlideInner"
-          style={{ transform: `translateX(-${slide * 100}%)` }}
-        >
-          <div id="carouselSlide0" className="carouselSlide">
-            <div className="slideContent">
+          style={{ transform: `translateX(-${slide * 100}%)` }}>
+          <div id="carouselSlide0" className="carouselSlide" tabIndex={1}>
+            <div className="slideContent" >
               <p>
                 I&apos;m creative and have excellent problem solving skills,
                 I&apos;m a quick learner and can adapt to any programming
@@ -75,7 +72,7 @@ function Carousel() {
               <p>You can reach me at elisewillar@gmail.com</p>
             </div>
           </div>
-          <div id="carouselSlide1" className="carouselSlide">
+          <div id="carouselSlide1" className="carouselSlide" tabIndex={2}>
             <div className="slideContent">
               <h3>I&apos;m skilled with</h3>
 
@@ -101,7 +98,7 @@ function Carousel() {
                 <SkilledTechnology name="Python" link="https://www.python.org/" icon="devicon-python-plain colored" />
 
                 <li>
-                  <a href="https://tauri.app/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                  <a href="https://tauri.app/" tabIndex={-1} target={"_blank"} rel="noreferrer" className={"technologyLink"} >
                     {" "}
                     <Image
                       width="16px"
@@ -120,7 +117,7 @@ function Carousel() {
               </ul>
             </div >
           </div >
-          <div id="carouselSlide2" className="carouselSlide">
+          <div id="carouselSlide2" className="carouselSlide" tabIndex={3}>
             <div className="slideContent">
               <div className={githubProjectStyle.container}>
                 <GithubProject
