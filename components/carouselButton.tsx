@@ -21,6 +21,7 @@ function carouselButton(props: any) {
       className={`carouselButton ${classPlaceholder}`}
       onClick={() => props.setSlide(props.id)}
       id={`carouselButton${props.id}`}
+      tabIndex={-1}
     >
       {props.name}
     </button>

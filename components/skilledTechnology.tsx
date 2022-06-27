@@ -10,7 +10,7 @@ function skilledTechnology(props: any) {
 
     return (
         <li>
-            <a href={props.link} target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+            <a href={props.link} tabIndex={-1} target={"_blank"} rel="noreferrer" className={"technologyLink"}>
                 <i className={props.icon} /> {props.name}
             </a>
         </li>
