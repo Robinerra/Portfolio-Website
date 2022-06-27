@@ -22,6 +22,8 @@ function Carousel() {
   //So the inner div essentially has a size of 300% viewport width, and every slide a width of 100%,
   //and we're shifting it by -100% or 100% to bring the different slides into the viewport, this all works with CSS transform & translate,
   //the only JS is just the button handling.
+
+  //And yes the skills & hobbies page is hell
   return (
     <>
       <div id="carouselButtonContainer">
@@ -75,64 +77,93 @@ function Carousel() {
           <div id="carouselSlide1" className="carouselSlide">
             <div className="slideContent">
               <h3>I&apos;m skilled with</h3>
+
               <div className="hobbiesCategory">
                 <p>
-                  <i className="devicon-react-original colored" /> ReactJS
+                  <a href="https://reactjs.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-react-original colored" /> ReactJS
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-nextjs-original" /> NextJS
+                  <a href="https://nextjs.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-nextjs-original" /> NextJS
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-nodejs-plain colored" /> NodeJS
+                  <a href="https://nodejs.org/en/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-nodejs-plain colored" /> NodeJS
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-typescript-plain colored" /> Typescript
+                  <a href="https://www.typescriptlang.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-typescript-plain colored" /> Typescript
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-html5-plain colored" /> HTML
+                  <a href="https://www.tomorrowtides.com/html23788.html" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-html5-plain colored" /> HTML
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-css3-plain colored" /> Less, CSS & Sass
+                  <a href="https://lesscss.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-css3-plain colored" /> Less/CSS
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-linux-plain" /> Linux
+                  <a href="https://www.linux.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-linux-plain" /> Linux
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-mongodb-plain colored" /> MongoDB
+                  <a href="https://www.mongodb.com/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-mongodb-plain colored" /> MongoDB
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-git-plain colored" /> Git
+                  <a href="https://git-scm.com/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-git-plain colored" /> Git
+                  </a>
                 </p>
-              </div>
+              </div >
 
               <h3>I&apos;m learning</h3>
               <div className="hobbiesCategory">
                 <p>
-                  <i className="devicon-rust-plain" /> Rust
+                  <a href="https://www.rust-lang.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-rust-plain" /> Rust
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-csharp-plain colored" /> C#
+                  <a href="https://docs.microsoft.com/en-us/dotnet/csharp/tour-of-csharp/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-csharp-plain colored" /> C#
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-python-plain colored" /> Python
+                  <a href="https://www.python.org/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-python-plain colored" /> Python
+                  </a>
                 </p>
                 <p>
-                  {" "}
-                  <Image
-                    width="16px"
-                    height="16px"
-                    className="tauriIcon"
-                    alt="Tauri Icon"
-                    src={tauriIcon}
-                  />{" "}
-                  Tauri
+                  <a href="https://tauri.app/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    {" "}
+                    <Image
+                      width="16px"
+                      height="16px"
+                      className="tauriIcon"
+                      alt="Tauri Icon"
+                      src={tauriIcon}
+                    />{" "}
+                    Tauri
+                  </a>
                 </p>
                 <p>
-                  <i className="devicon-unity-original" /> Unity
+                  <a href="https://unity.com/" target={"_blank"} rel="noreferrer" className={"technologyLink"} >
+                    <i className="devicon-unity-original" /> Unity
+                  </a>
                 </p>
               </div>
-            </div>
-          </div>
+            </div >
+          </div >
           <div id="carouselSlide2" className="carouselSlide">
             <div className="slideContent">
               <div className={githubProjectStyle.container}>
@@ -147,12 +178,11 @@ function Carousel() {
                     "devicon-less-plain-wordmark",
                   ]}
                 />
-               
               </div>
             </div>
           </div>
-        </div>
-      </div>
+        </div >
+      </div >
     </>
   );
 }
