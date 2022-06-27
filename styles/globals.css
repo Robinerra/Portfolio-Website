@@ -172,8 +172,10 @@ a.technologyLink:visited {
   max-width: 20em;
   flex-wrap: wrap;
   justify-content: center;
+  list-style-type: none;
+  padding-left: 0px;
 }
-#carouselSlideContainer #carouselSlide1 .hobbiesCategory p {
+#carouselSlideContainer #carouselSlide1 .hobbiesCategory li {
   padding: 5px;
   margin: 0px;
   font-size: 0.9em;
