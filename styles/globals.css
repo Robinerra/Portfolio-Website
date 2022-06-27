@@ -54,6 +54,13 @@ a {
 a:visited {
   color: #D60270;
 }
+a.technologyLink {
+  color: #f2f2f2;
+  text-decoration: none;
+}
+a.technologyLink:visited {
+  color: #f2f2f2;
+}
 #title {
   padding: 10px;
 }
