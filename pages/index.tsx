@@ -19,16 +19,16 @@ const Home: NextPage = () => {
         <meta name="author" content="Elise Willar" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    
+
       <div id="title">
         <h1 id='titleName'>
-          <span className='titleNameSmall'>I&apos;m</span><span className="titleNameGradient"> Elise Willar</span> 
+          <span className='titleNameSmall'>I&apos;m</span><span className="titleNameGradient"> Elise Willar</span>
           <span className='titleNameSmall'>.</span>
         </h1>
         <h2 id='titleSubtext'>Software Engineer & Web Developer.</h2>
       </div>
 
-      <Image id="selfPhoto" src={selfPhoto} height="160px" alt="Photo of Elise Willar" width="160px"/>
+      <Image id="selfPhoto" src={selfPhoto} height="160px" alt="Photo of Elise Willar" width="160px" />
 
       <Quote quote="Good design is as little design as possible." cite="motherfuckingwebsite.com" />
 

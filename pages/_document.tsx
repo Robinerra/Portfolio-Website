@@ -8,11 +8,11 @@ export default function Document() {
     //It will be loaded before the page body so the background color is already set and we don't get a flash of white on reload. 
     //Only works on production, the dev server is slow AF and we still get a white flash.
     <Html>
-      <Head> 
-      <style> {"body {background-color:#212529;}"}
-      </style>
+      <Head>
+        <style> {"body {background-color:#212529;}"}
+        </style>
       </Head>
-  
+
       <body>
         <Main />
         <NextScript />

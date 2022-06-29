@@ -115,15 +115,15 @@ a.technologyLink:visited {
   border: none;
 }
 #carouselButtonContainer .carouselButton.active {
-  text-decoration: underline 2px #D60270 !important;
+  text-decoration: underline 3px #D60270 !important;
   -webkit-text-decoration-line: underline !important;
   text-decoration-line: underline !important;
   -webkit-text-decoration-color: #D60270 !important;
   text-decoration-color: #D60270 !important;
   -webkit-text-decoration-style: solid !important;
   text-decoration-style: solid !important;
-  -webkit-text-decoration-thickness: 4px !important;
-  text-decoration-thickness: 4px !important;
+  -webkit-text-decoration-thickness: 3px !important;
+  text-decoration-thickness: 3px !important;
 }
 #carouselButtonContainer .carouselButton:hover {
   font-size: 1.3em;
