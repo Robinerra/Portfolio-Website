@@ -1,6 +1,8 @@
 //Copyright Elise Willar 2022 for elisewillar.com
-//19th of June 2022
+//1st of July 2022
 import React from 'react'
+import style from "../styles/components/quote.module.css"
+
 
 function quote(props: any) {
     interface props {
@@ -13,11 +15,11 @@ function quote(props: any) {
   //  https://smartquotesforsmartpeople.com/
   return (
     <div>
-        <p className="quote">
-            <span  className="quoteOpeningMark quoteMark">&ldquo;</span>
-            <span className='quoteText'>{props.quote}</span>
-            <span className="quoteClosingMark quoteMark">&rdquo;</span><br/>
-            <span className='quoteCitation'>{props.cite}</span>
+        <p className={style.quote}>
+            <span  className={[style.openingMark, style.mark].join(' ')}>&ldquo;</span>
+            <span className={style.text}>{props.quote}</span>
+            <span className={[style.closingMark, style.mark].join(' ')}>&rdquo;</span><br/>
+            <span className={style.citation}>{props.cite}</span>
         </p>
     </div>
   )

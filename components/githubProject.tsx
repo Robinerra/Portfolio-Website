@@ -1,8 +1,8 @@
 //Copyright Elise Willar 2022 for elisewillar.com
-//26th of June 2022
+//1st of July 2022
 
 import React from "react";
-import style from "../styles/githubProject.module.css";
+import style from "../styles/components/githubProject.module.css"
 
 function githubProject(props: any) {
   interface props {

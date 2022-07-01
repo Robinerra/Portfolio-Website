@@ -1,0 +1,45 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes textclip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes borderGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.quote {
+  text-align: center;
+}
+.quote .closingMark {
+  font-size: 0.9em;
+}
+.quote .openingMark {
+  font-size: 1.4em;
+}
+.quote .mark {
+  font-family: "Libre Baskerville", Helvetica, Georgia, serif;
+}
+.quote .text {
+  font-family: "Libre Baskerville", Georgia, serif;
+}
+.quote .citation {
+  font-style: italic;
+  font-size: 0.8em;
+  display: inline-block;
+  text-align: right;
+}
