@@ -1,22 +1,3 @@
-@font-face {
-  font-family: "Oxygen Regular";
-  src: url("fonts/Oxygen-Regular.woff");
-}
-@font-face {
-  font-family: "Libre Baskerville";
-  src: url("fonts/LibreBaskerville-Italic.ttf");
-  font-style: italic;
-}
-@font-face {
-  font-family: "Libre Baskerville";
-  src: url("fonts/LibreBaskerville-Regular.ttf");
-  font-style: normal;
-}
-@font-face {
-  font-family: "Libre Baskerville";
-  src: url("fonts/LibreBaskerville-Bold.ttf");
-  font-weight: bold;
-}
 @keyframes fadeIn {
   from {
     opacity: 0;
@@ -40,6 +21,25 @@
   50% {
     background-position: 100% 50%;
   }
+}
+@font-face {
+  font-family: "Oxygen Regular";
+  src: url("fonts/Oxygen-Regular.woff");
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Italic.ttf");
+  font-style: italic;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Regular.ttf");
+  font-style: normal;
+}
+@font-face {
+  font-family: "Libre Baskerville";
+  src: url("fonts/LibreBaskerville-Bold.ttf");
+  font-weight: bold;
 }
 body {
   animation: fadeIn 3s;
@@ -102,83 +102,16 @@ a.technologyLink:visited {
   color: transparent;
   border-radius: 50em;
 }
-#carouselButtonContainer {
-  height: 4.5em;
-}
-#carouselButtonContainer .carouselButton {
-  transition: 0.2s ease-in;
-  color: #f2f2f2;
-  background-color: transparent;
-  font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
-  font-size: 1.1em;
-  padding: 1.3em;
-  border: none;
-}
-#carouselButtonContainer .carouselButton.active {
-  text-decoration: underline 3px #D60270 !important;
-  -webkit-text-decoration-line: underline !important;
-  text-decoration-line: underline !important;
-  -webkit-text-decoration-color: #D60270 !important;
-  text-decoration-color: #D60270 !important;
-  -webkit-text-decoration-style: solid !important;
-  text-decoration-style: solid !important;
-  -webkit-text-decoration-thickness: 3px !important;
-  text-decoration-thickness: 3px !important;
-}
-#carouselButtonContainer .carouselButton:hover {
-  font-size: 1.3em;
-  padding: 0.9em;
-}
-#carouselButton0 {
-  animation: fadeIn 3s;
-}
-#carouselButton1 {
-  animation: fadeIn 4s;
-}
-#carouselButton2 {
-  animation: fadeIn 5s;
-}
-#carouselButton3 {
-  animation: fadeIn 6s;
-}
-#carouselSlideContainer {
-  overflow: hidden;
-}
-#carouselSlideContainer #carouselSlideInner {
-  white-space: nowrap;
-  transition: transform 0.3s;
-}
-#carouselSlideContainer .carouselSlide {
-  display: inline-flex;
-  width: 100%;
-  justify-content: center;
-  text-align: center;
-  align-items: center;
-  align-content: center;
-}
-#carouselSlideContainer .carouselSlide .slideContent {
+.slideContent {
   display: inline-block;
   text-align: center;
   overflow-wrap: break-word;
   max-width: 50em;
 }
-#carouselSlideContainer .carouselSlide .slideContent p {
+.slideContent p {
   max-width: 25em;
   white-space: normal;
   flex-wrap: wrap;
-}
-#carouselSlideContainer #carouselSlide1 .hobbiesCategory {
-  display: flex;
-  max-width: 20em;
-  flex-wrap: wrap;
-  justify-content: center;
-  list-style-type: none;
-  padding-left: 0px;
-}
-#carouselSlideContainer #carouselSlide1 .hobbiesCategory li {
-  padding: 5px;
-  margin: 0px;
-  font-size: 0.9em;
 }
 .quote {
   text-align: center;

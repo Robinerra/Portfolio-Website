@@ -1,0 +1,36 @@
+//Copyright Elise Willar 2022 for elisewillar.com
+//1st of July 2022
+
+
+@import "../variables.less";
+
+.button {
+    transition: .2s ease-in;
+    color: @textColor;
+    background-color: transparent;
+    font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+    font-size: 1.1em;
+    padding: 1.3em;
+    border: none;
+
+    &.active {
+        text-decoration: underline 3px #D60270 !important;
+        //The text decoration isn't standard and is FUBAR on some browsers like Safari on IOS,
+        //so we need all this stuff.
+        //https://developer.mozilla.org/en-US/docs/Web/CSS/text-decoration
+        -webkit-text-decoration-line: underline !important;
+        text-decoration-line: underline !important;
+        -webkit-text-decoration-color: #D60270 !important;
+        text-decoration-color: #D60270 !important;
+        -webkit-text-decoration-style: solid !important;
+        text-decoration-style: solid !important;
+        -webkit-text-decoration-thickness: 3px !important;
+        text-decoration-thickness: 3px !important;
+    }
+}
+
+//Needs to be a seperate declaration otherwise Less won't compile it correctly
+.carouselButton:hover {
+    font-size: 1.3em;
+    padding: 0.9em;
+}

@@ -1,0 +1,9 @@
+.githubContainer {
+  display: flex;
+  flex-direction: row;
+  column-gap: 2vh;
+  row-gap: 2vh;
+  max-width: 100vw;
+  flex-wrap: wrap;
+  justify-content: center;
+}

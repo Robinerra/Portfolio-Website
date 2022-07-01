@@ -1,0 +1,48 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes textclip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes borderGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+.button {
+  transition: 0.2s ease-in;
+  color: #f2f2f2;
+  background-color: transparent;
+  font-family: Oxygen, 'Oxygen Regular', 'Oxygen', sans-serif;
+  font-size: 1.1em;
+  padding: 1.3em;
+  border: none;
+}
+.button.active {
+  text-decoration: underline 3px #D60270 !important;
+  -webkit-text-decoration-line: underline !important;
+  text-decoration-line: underline !important;
+  -webkit-text-decoration-color: #D60270 !important;
+  text-decoration-color: #D60270 !important;
+  -webkit-text-decoration-style: solid !important;
+  text-decoration-style: solid !important;
+  -webkit-text-decoration-thickness: 3px !important;
+  text-decoration-thickness: 3px !important;
+}
+.carouselButton:hover {
+  font-size: 1.3em;
+  padding: 0.9em;
+}

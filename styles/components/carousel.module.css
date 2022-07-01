@@ -1,0 +1,67 @@
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+@keyframes textclip {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+@keyframes borderGradient {
+  50% {
+    background-position: 100% 50%;
+  }
+}
+#slideContainer {
+  overflow: hidden;
+}
+#slideContainer #slideInner {
+  white-space: nowrap;
+  transition: transform 0.3s;
+}
+#slideContainer .slide {
+  display: inline-flex;
+  width: 100%;
+  justify-content: center;
+  text-align: center;
+  align-items: center;
+  align-content: center;
+}
+#slideContainer #slide1 .hobbiesCategory {
+  display: flex;
+  max-width: 20em;
+  flex-wrap: wrap;
+  justify-content: center;
+  list-style-type: none;
+  padding-left: 0px;
+}
+#slideContainer #slide1 .hobbiesCategory li {
+  padding: 5px;
+  margin: 0px;
+  font-size: 0.9em;
+}
+#buttonContainer {
+  height: 4.5em;
+}
+.button0 {
+  animation: fadeIn 3s;
+}
+.button1 {
+  animation: fadeIn 4s;
+}
+.button2 {
+  animation: fadeIn 5s;
+}
+.button3 {
+  animation: fadeIn 6s;
+}

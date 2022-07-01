@@ -1,0 +1,66 @@
+//Copyright Elise Willar 2022 for elisewillar.com
+//1st of July 2022
+
+@import '../variables.less';
+
+#slideContainer {
+    overflow: hidden;
+
+    #slideInner {
+        white-space: nowrap;
+        transition: transform 0.3s;
+       
+    }
+
+    .slide {
+        display: inline-flex;
+        width: 100%;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+        align-items: center;
+        align-content: center;
+    }
+
+    #slide0 {
+    }
+
+    #slide1 {
+        .hobbiesCategory {
+            display: flex;
+            max-width: 20em;
+            flex-wrap: wrap;
+            justify-content: center;
+            list-style-type: none;
+            padding-left:0px;
+
+            li {
+                padding: 5px;
+                margin: 0px;
+                font-size: 0.9em;
+            }
+        }
+    }
+
+    #slide2 {}
+}
+
+#buttonContainer {
+    height: 4.5em;
+}
+
+.button0 {
+    animation: fadeIn 3s;
+}
+
+.button1 {
+    animation: fadeIn 4s;
+}
+
+.button2 {
+    animation: fadeIn 5s;
+}
+
+.button3 {
+    animation: fadeIn 6s;
+}
